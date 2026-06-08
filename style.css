@@ -1177,4 +1177,18 @@ footer {
         flex-direction: column;
         text-align: center;
     }
+
+    @media (max-width: 768px) {
+        .hero {
+            flex-direction: column;
+        }
+
+        .menu {
+            flex-direction: column;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+    }
 }
