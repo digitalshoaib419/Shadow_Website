@@ -797,7 +797,87 @@
             }
         }
 
-        @media (max-width: 860px) {
+         @media (max-width: 860px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .contact-btn {
+                display: none;
+            }
+
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #090909;
+                border-bottom: 1px solid var(--border);
+                padding: 1rem 1.5rem 1.5rem;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav-menu.open {
+                display: flex;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                width: 100%;
+                gap: 0;
+            }
+
+            .nav-links>li {
+                width: 100%;
+            }
+
+            .nav-links>li>a,
+            .dropdown-btn {
+                width: 100%;
+                justify-content: space-between;
+                padding: 0.75rem 0.5rem;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+                border-radius: 0;
+            }
+
+           
+             .dropdown-content{
+        position: relative !important;
+        left: 0 !important;
+        top: 0 !important;
+        transform: none !important;
+
+        width: 100% !important;
+        min-width: 100% !important;
+
+        margin-left: 0 !important;
+        padding-left: 15px;
+
+        opacity: 1 !important;
+        visibility: visible !important;
+
+        display: none;
+        overflow: hidden;
+    }
+
+    .dropdown.active .dropdown-content{
+        display:block !important;
+    }
+
+            .dropdown.active .dropdown-btn i {
+                transform: rotate(180deg);
+            }
+
+            .dropdown-content a {
+                padding: 0.6rem 1rem;
+                font-size: 0.8rem;
+            }
+        }
+
+
+        /* @media (max-width: 860px) {
             .hamburger {
                 display: flex;
             }
@@ -869,7 +949,7 @@
                 padding: 0.6rem 1rem;
                 font-size: 0.8rem;
             }
-        }
+        } */
     </style>
 </head>
 
@@ -898,7 +978,7 @@
 
                         <!-- SERVICES -->
                         <li class="dropdown">
-                            <a href="#">SERVICES</a>
+                            <a href="#" class="dropdown-toggle">SERVICES</a>
 
                             <div class="dropdown-content">
                                 <a href="Search-engine-optimization.html">SEO Services</a>
@@ -913,7 +993,7 @@
 
                         <!-- PRICING -->
                         <li class="dropdown">
-                            <a href="#">PRICING</a>
+                            <a href="#" class="dropdown-toggle">PRICING</a>
 
                             <div class="dropdown-content">
                                 <a href="Seo-pricing.html">SEO Pricing</a>
@@ -928,7 +1008,7 @@
 
                         <!-- RESULTS -->
                         <li class="dropdown">
-                            <a href="#">RESULTS</a>
+                            <a href="#" class="dropdown-toggle">RESULTS</a>
 
                             <div class="dropdown-content">
                                 <a href="SEO&PPCResults.html">SEO & PPC Results</a>
@@ -956,18 +1036,41 @@
         </div>
     </header>
 
-    <script>
-        const ham = document.getElementById("hamburger");
-        const nav = document.getElementById("navMenu");
-        ham.addEventListener("click", () => {
-            ham.classList.toggle("open");
-            nav.classList.toggle("open");
-        });
-        document.querySelectorAll(".dropdown").forEach(dd => {
-            dd.querySelector(".dropdown-btn")?.addEventListener("click", () => {
-                if (window.innerWidth <= 860) dd.classList.toggle("active");
+   <script>
+        const ham = document.querySelector('.hamburger');
+        const nav = document.querySelector('.nav-menu');
+
+         ham.addEventListener('click', () => {
+             ham.classList.toggle('open');
+             nav.classList.toggle('open');
+         });
+
+
+// MOBILE DROPDOWN
+document.querySelectorAll('.dropdown-toggle').forEach(item => {
+
+    item.addEventListener('click', function(e) {
+
+        if (window.innerWidth <= 860) {
+
+            e.preventDefault();
+
+            const parent = this.parentElement;
+
+            document.querySelectorAll('.dropdown').forEach(drop => {
+
+                if (drop !== parent) {
+                    drop.classList.remove('active');
+                }
+
             });
-        });
+
+            parent.classList.toggle('active');
+        }
+
+    });
+
+});
     </script>
 </body>
 

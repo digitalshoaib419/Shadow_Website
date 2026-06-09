@@ -1062,7 +1062,7 @@ footer {
 }
 
 /* ========== RESPONSIVE ========== */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     header {
         padding: 16px 30px;
     }
@@ -1117,7 +1117,7 @@ footer {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     nav {
         display: none;
         flex-direction: column;
@@ -1178,7 +1178,7 @@ footer {
         text-align: center;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 1025px) {
         .hero {
             flex-direction: column;
         }
