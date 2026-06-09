@@ -5,6 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>Velocity Nexus | About Us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow | Header</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Exo+2:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap"
         rel="stylesheet">
@@ -666,19 +672,8 @@
         }
         
     </style>
-</head>
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shadow | Header</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Exo+2:wght@300;400;500;600&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+   
     <style>
         *,
         *::before,
@@ -1085,48 +1080,6 @@
         </div>
     </header>
 
-     <script>
-        const ham = document.querySelector('.hamburger');
-        const nav = document.querySelector('.nav-menu');
-
-         ham.addEventListener('click', () => {
-             ham.classList.toggle('open');
-             nav.classList.toggle('open');
-         });
-
-
-// MOBILE DROPDOWN
-document.querySelectorAll('.dropdown-toggle').forEach(item => {
-
-    item.addEventListener('click', function(e) {
-
-        if (window.innerWidth <= 860) {
-
-            e.preventDefault();
-
-            const parent = this.parentElement;
-
-            document.querySelectorAll('.dropdown').forEach(drop => {
-
-                if (drop !== parent) {
-                    drop.classList.remove('active');
-                }
-
-            });
-
-            parent.classList.toggle('active');
-        }
-
-    });
-
-});
-    </script>
-</body>
-
-</html>
-
-<body>
-
     <!-- Custom Cursor Elements - same as homepage -->
     <div class="cur" id="cur"></div>
     <div class="cur-ring" id="curR"></div>
@@ -1506,6 +1459,40 @@ document.querySelectorAll('.dropdown-toggle').forEach(item => {
 
 
     <script>
+        const ham = document.querySelector('.hamburger');
+        const nav = document.querySelector('.nav-menu');
+
+         ham.addEventListener('click', () => {
+             ham.classList.toggle('open');
+             nav.classList.toggle('open');
+         });
+
+
+// MOBILE DROPDOWN
+document.querySelectorAll('.dropdown-toggle').forEach(item => {
+
+    item.addEventListener('click', function(e) {
+
+        if (window.innerWidth <= 860) {
+
+            e.preventDefault();
+
+            const parent = this.parentElement;
+
+            document.querySelectorAll('.dropdown').forEach(drop => {
+
+                if (drop !== parent) {
+                    drop.classList.remove('active');
+                }
+
+            });
+
+            parent.classList.toggle('active');
+        }
+
+    });
+
+});
         // Custom Cursor - same system as homepage (red dot + outer ring that scales on hover)
         if (window.matchMedia('(hover:hover)').matches) {
             const cur = document.getElementById('cur');
