@@ -630,7 +630,7 @@
             font-family: 'Syne', sans-serif;
             font-size: 1rem;
             font-weight: 700;
-            color: #1e1e1e;
+            color: #cdcccc;
             text-transform: uppercase;
             letter-spacing: .07em;
             display: inline-flex;
@@ -1253,7 +1253,7 @@
         .cta-fine {
             margin-top: 1.4rem;
             font-size: .72rem;
-            color: #2a2a2a
+            color: #ffffff
         }
 
         /* ═════════ RESPONSIVE ═════════ */
@@ -2473,7 +2473,7 @@
                             <a href="#" class="s-ig"><i class="fab fa-instagram"></i></a>
                             <a href="#" class="s-tw"><i class="fab fa-x-twitter"></i></a>
                             <a href="#" class="s-yt"><i class="fab fa-youtube"></i></a>
-                            
+
                             <a href="https://wa.me/917860346828" class="s-wa"><i class="fab fa-whatsapp"></i></a>
                         </div>
                     </div>
@@ -2560,6 +2560,28 @@
             });
         }, { threshold: .2 });
         document.querySelectorAll('.stats-grid').forEach(el => cObs.observe(el));
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+
+        if (hamburger && navMenu) {
+            hamburger.addEventListener("click", () => {
+                hamburger.classList.toggle("open");
+                navMenu.classList.toggle("open");
+            });
+        }
+        document.querySelectorAll(".dropdown-btn").forEach(btn => {
+            btn.addEventListener("click", function (e) {
+                if (window.innerWidth <= 860) {
+                    e.preventDefault();
+
+                    const dropdown = this.closest(".dropdown");
+
+                    if (dropdown) {
+                        dropdown.classList.toggle("active");
+                    }
+                }
+            });
+        });
     </script>
 </body>
 
