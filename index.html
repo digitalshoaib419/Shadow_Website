@@ -1464,12 +1464,7 @@
             }
         }
     </style>
-<!-- </head>
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head> -->
     <style>
         *,
         *::before,
@@ -1492,6 +1487,7 @@
             background: var(--bg);
             font-family: "Exo 2", sans-serif;
         }
+
 
         .site-header {
             position: sticky;
@@ -1705,6 +1701,11 @@
         /* RESPONSIVE */
         @media (max-width: 1024px) {
 
+            .main-div{
+            min-width: 100vw;
+            width: 100%;
+            }
+
             .nav-links>li>a,
             .dropdown-btn {
                 padding: 0.5rem 0.6rem;
@@ -1810,9 +1811,49 @@
             }
         }
     </style>
+
+    <style>
+        *, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.main-div {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.hero-grid-bg {
+    overflow: hidden;
+}
+
+/* Ticker fix */
+.ticker {
+    overflow: hidden;
+    width: 100%;
+}
+
+/* Float cards causing overflow */
+@media (max-width: 768px) {
+    .fc1 {
+        left: 0;
+        bottom: 0;
+    }
+    .fc2 {
+        right: 0;
+        top: 1rem;
+    }
+}
+    </style>
 </head>
 
 <body>
+
+ <div class="main-div">
     <header class="site-header">
         <div class="container">
             <div class="header-inner">
@@ -2392,6 +2433,7 @@
         </div>
     </section>
 
+   <!-- ========== FOOTER ========== -->
     <footer class="footer">
 
         <div class="orb orb-1"></div>
@@ -2456,16 +2498,19 @@
 
                     <div class="contact-item">
                         <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                        <div style="display: flex; flex-direction: column;">
+                            <p><a href="tel:+16019631249">+1 60196 31249</a></p>
                         <p><a href="tel:+917860346828">+91 78603 46828</a></p>
+                        </div>
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-                        <p><a href="mailto:digitalshoaib419@gmail.com">digitalshoaib419@gmail.com</a></p>
+                        <p><a href="mailto:shadowdigital0@gmail.com">shadowdigital0@gmail.com</a></p>
                     </div>
-                    <div class="contact-item">
+                    <!-- <div class="contact-item">
                         <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
                         <p>Kanpur, Uttar Pradesh<br>India — 208001</p>
-                    </div>
+                    </div> -->
                     <div class="contact-item">
                         <div class="contact-icon"><i class="fas fa-clock"></i></div>
                         <p>Mon – Sat: 9 AM – 7 PM<br>Sun: By Appointment</p>
@@ -2495,13 +2540,14 @@
         <div class="container">
             <div class="footer-bottom">
                 <p class="footer-bottom-left">
-                    © 2026 <span>Shadow Digital</span>. All Rights Reserved. Crafted with <span>♥</span> in Kanpur.
+                    © 2026 <span>Shadow Digital</span>. All Rights Reserved. 
                 </p>
                 <div class="footer-bottom-right">
                     <a href="#">Privacy Policy</a>
                     <span class="dot">·</span>
                     <a href="#">Terms &amp; Conditions</a>
                     <span class="dot">·</span>
+                    <!-- <a href="#">Sitemap</a> -->
                 </div>
             </div>
         </div>
@@ -2512,6 +2558,8 @@
     <a href="https://wa.me/917860346828" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
+
+    </div>
 
     <script>
         const ham = document.querySelector('.hamburger');

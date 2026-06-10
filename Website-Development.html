@@ -932,7 +932,7 @@
             }
         }
 
-          @media (max-width: 860px) {
+        @media (max-width: 860px) {
             .hamburger {
                 display: flex;
             }
@@ -977,29 +977,29 @@
                 border-radius: 0;
             }
 
-           
-             .dropdown-content{
-        position: relative !important;
-        left: 0 !important;
-        top: 0 !important;
-        transform: none !important;
 
-        width: 100% !important;
-        min-width: 100% !important;
+            .dropdown-content {
+                position: relative !important;
+                left: 0 !important;
+                top: 0 !important;
+                transform: none !important;
 
-        margin-left: 0 !important;
-        padding-left: 15px;
+                width: 100% !important;
+                min-width: 100% !important;
 
-        opacity: 1 !important;
-        visibility: visible !important;
+                margin-left: 0 !important;
+                padding-left: 15px;
 
-        display: none;
-        overflow: hidden;
-    }
+                opacity: 1 !important;
+                visibility: visible !important;
 
-    .dropdown.active .dropdown-content{
-        display:block !important;
-    }
+                display: none;
+                overflow: hidden;
+            }
+
+            .dropdown.active .dropdown-content {
+                display: block !important;
+            }
 
             .dropdown.active .dropdown-btn i {
                 transform: rotate(180deg);
@@ -1169,41 +1169,41 @@
         </div>
     </header>
 
-  <script>
+    <script>
         const ham = document.querySelector('.hamburger');
         const nav = document.querySelector('.nav-menu');
 
-         ham.addEventListener('click', () => {
-             ham.classList.toggle('open');
-             nav.classList.toggle('open');
-         });
+        ham.addEventListener('click', () => {
+            ham.classList.toggle('open');
+            nav.classList.toggle('open');
+        });
 
 
-// MOBILE DROPDOWN
-document.querySelectorAll('.dropdown-toggle').forEach(item => {
+        // MOBILE DROPDOWN
+        document.querySelectorAll('.dropdown-toggle').forEach(item => {
 
-    item.addEventListener('click', function(e) {
+            item.addEventListener('click', function (e) {
 
-        if (window.innerWidth <= 860) {
+                if (window.innerWidth <= 860) {
 
-            e.preventDefault();
+                    e.preventDefault();
 
-            const parent = this.parentElement;
+                    const parent = this.parentElement;
 
-            document.querySelectorAll('.dropdown').forEach(drop => {
+                    document.querySelectorAll('.dropdown').forEach(drop => {
 
-                if (drop !== parent) {
-                    drop.classList.remove('active');
+                        if (drop !== parent) {
+                            drop.classList.remove('active');
+                        }
+
+                    });
+
+                    parent.classList.toggle('active');
                 }
 
             });
 
-            parent.classList.toggle('active');
-        }
-
-    });
-
-});
+        });
     </script>
 </body>
 
@@ -1616,16 +1616,19 @@ document.querySelectorAll('.dropdown-toggle').forEach(item => {
 
                     <div class="contact-item">
                         <div class="contact-icon"><i class="fas fa-phone"></i></div>
-                        <p><a href="tel:+917860346828">+91 78603 46828</a></p>
+                        <div style="display: flex; flex-direction: column;">
+                            <p><a href="tel:+16019631249">+1 60196 31249</a></p>
+                            <p><a href="tel:+917860346828">+91 78603 46828</a></p>
+                        </div>
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-                        <p><a href="mailto:digitalshoaib419@gmail.com">digitalshoaib419@gmail.com</a></p>
+                        <p><a href="mailto:shadowdigital0@gmail.com">shadowdigital0@gmail.com</a></p>
                     </div>
-                    <div class="contact-item">
+                    <!-- <div class="contact-item">
                         <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
                         <p>Kanpur, Uttar Pradesh<br>India — 208001</p>
-                    </div>
+                    </div> -->
                     <div class="contact-item">
                         <div class="contact-icon"><i class="fas fa-clock"></i></div>
                         <p>Mon – Sat: 9 AM – 7 PM<br>Sun: By Appointment</p>
@@ -1655,20 +1658,20 @@ document.querySelectorAll('.dropdown-toggle').forEach(item => {
         <div class="container">
             <div class="footer-bottom">
                 <p class="footer-bottom-left">
-                    © 2026 <span>Shadow Digital</span>. All Rights Reserved. Crafted with <span>♥</span> in Kanpur.
+                    © 2026 <span>Shadow Digital</span>. All Rights Reserved.
                 </p>
                 <div class="footer-bottom-right">
                     <a href="#">Privacy Policy</a>
                     <span class="dot">·</span>
                     <a href="#">Terms &amp; Conditions</a>
                     <span class="dot">·</span>
-                    <a href="#">Sitemap</a>
+                    <!-- <a href="#">Sitemap</a> -->
                 </div>
             </div>
         </div>
 
     </footer>
-
+    
     <!-- WhatsApp Float -->
     <a href="https://wa.me/917860346828" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
         <i class="fab fa-whatsapp"></i>
