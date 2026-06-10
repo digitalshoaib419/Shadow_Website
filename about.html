@@ -670,10 +670,9 @@
                 padding: 1.2rem
             }
         }
-        
     </style>
 
-   
+
     <style>
         *,
         *::before,
@@ -961,29 +960,29 @@
                 border-radius: 0;
             }
 
-           
-             .dropdown-content{
-        position: relative !important;
-        left: 0 !important;
-        top: 0 !important;
-        transform: none !important;
 
-        width: 100% !important;
-        min-width: 100% !important;
+            .dropdown-content {
+                position: relative !important;
+                left: 0 !important;
+                top: 0 !important;
+                transform: none !important;
 
-        margin-left: 0 !important;
-        padding-left: 15px;
+                width: 100% !important;
+                min-width: 100% !important;
 
-        opacity: 1 !important;
-        visibility: visible !important;
+                margin-left: 0 !important;
+                padding-left: 15px;
 
-        display: none;
-        overflow: hidden;
-    }
+                opacity: 1 !important;
+                visibility: visible !important;
 
-    .dropdown.active .dropdown-content{
-        display:block !important;
-    }
+                display: none;
+                overflow: hidden;
+            }
+
+            .dropdown.active .dropdown-content {
+                display: block !important;
+            }
 
             .dropdown.active .dropdown-btn i {
                 transform: rotate(180deg);
@@ -994,12 +993,54 @@
                 font-size: 0.8rem;
             }
         }
-
     </style>
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        .main-div {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        .hero-grid-bg {
+            overflow: hidden;
+        }
+
+        /* Ticker fix */
+        .ticker {
+            overflow: hidden;
+            width: 100%;
+        }
+
+        /* Float cards causing overflow */
+        @media (max-width: 768px) {
+            .fc1 {
+                left: 0;
+                bottom: 0;
+            }
+
+            .fc2 {
+                right: 0;
+                top: 1rem;
+            }
+        }
+    </style>
+
 </head>
 
 <body>
-    <header class="site-header">
+    <div></div><header class="site-header">
         <div class="container">
             <div class="header-inner">
 
@@ -1226,35 +1267,28 @@
                 <p>Meet the strategists, creatives, and data scientists driving real results every single day.</p>
             </div>
             <div class="team-grid">
-                <div class="team-card fu"><img class="team-img"
-                        src="./assets/images/hridyansh.jpeg"
-                        alt="Arjun Mehta">
+                <div class="team-card fu"><img class="team-img" src="./assets/images/hridyansh.jpeg" alt="Arjun Mehta">
                     <div class="team-info">
                         <div class="team-name">Henrick</div>
                         <div class="team-desc">Startup strategist with 3+ years in performance marketing. Leads the
                             vision with a focus on ethical growth.</div>
                     </div>
                 </div>
-                <div class="team-card fu"><img class="team-img"
-                        src="./assets/images/shoaib.jpeg"
-                        alt="Priya Sharma">
+                <div class="team-card fu"><img class="team-img" src="./assets/images/shoaib.jpeg" alt="Priya Sharma">
                     <div class="team-info">
                         <div class="team-name">SAIM</div>
                         <div class="team-desc">Award-winning storyteller. Crafts brand narratives that resonate across
                             cultures and platforms.</div>
                     </div>
                 </div>
-                <div class="team-card fu"><img class="team-img"
-                        src="./assets/images/mohsin.jpeg"
-                        alt="Rohan Verma">
+                <div class="team-card fu"><img class="team-img" src="./assets/images/mohsin.jpeg" alt="Rohan Verma">
                     <div class="team-info">
                         <div class="team-name">MARCO</div>
                         <div class="team-desc">Data wizard specializing in predictive modeling and AI-driven campaign
                             optimization.</div>
                     </div>
                 </div>
-                <div class="team-card fu"><img class="team-img"
-                        src="./assets/images/shoaib-mpgi.jpeg"
+                <div class="team-card fu"><img class="team-img" src="./assets/images/shoaib-mpgi.jpeg"
                         alt="Neha Kapoor">
                     <div class="team-info">
                         <div class="team-name">Micheal</div>
@@ -1397,7 +1431,7 @@
                         <div class="contact-icon"><i class="fas fa-phone"></i></div>
                         <div style="display: flex; flex-direction: column;">
                             <p><a href="tel:+16019631249">+1 60196 31249</a></p>
-                        <p><a href="tel:+917860346828">+91 78603 46828</a></p>
+                            <p><a href="tel:+917860346828">+91 78603 46828</a></p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -1437,7 +1471,7 @@
         <div class="container">
             <div class="footer-bottom">
                 <p class="footer-bottom-left">
-                    © 2026 <span>Shadow Digital</span>. All Rights Reserved. 
+                    © 2026 <span>Shadow Digital</span>. All Rights Reserved.
                 </p>
                 <div class="footer-bottom-right">
                     <a href="#">Privacy Policy</a>
@@ -1454,7 +1488,7 @@
     <!-- WhatsApp Float -->
     <a href="https://wa.me/917860346828" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
         <i class="fab fa-whatsapp"></i>
-    </a>
+    </a><div></div>
 
 
 
@@ -1462,37 +1496,37 @@
         const ham = document.querySelector('.hamburger');
         const nav = document.querySelector('.nav-menu');
 
-         ham.addEventListener('click', () => {
-             ham.classList.toggle('open');
-             nav.classList.toggle('open');
-         });
+        ham.addEventListener('click', () => {
+            ham.classList.toggle('open');
+            nav.classList.toggle('open');
+        });
 
 
-// MOBILE DROPDOWN
-document.querySelectorAll('.dropdown-toggle').forEach(item => {
+        // MOBILE DROPDOWN
+        document.querySelectorAll('.dropdown-toggle').forEach(item => {
 
-    item.addEventListener('click', function(e) {
+            item.addEventListener('click', function (e) {
 
-        if (window.innerWidth <= 860) {
+                if (window.innerWidth <= 860) {
 
-            e.preventDefault();
+                    e.preventDefault();
 
-            const parent = this.parentElement;
+                    const parent = this.parentElement;
 
-            document.querySelectorAll('.dropdown').forEach(drop => {
+                    document.querySelectorAll('.dropdown').forEach(drop => {
 
-                if (drop !== parent) {
-                    drop.classList.remove('active');
+                        if (drop !== parent) {
+                            drop.classList.remove('active');
+                        }
+
+                    });
+
+                    parent.classList.toggle('active');
                 }
 
             });
 
-            parent.classList.toggle('active');
-        }
-
-    });
-
-});
+        });
         // Custom Cursor - same system as homepage (red dot + outer ring that scales on hover)
         if (window.matchMedia('(hover:hover)').matches) {
             const cur = document.getElementById('cur');
