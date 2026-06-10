@@ -295,7 +295,7 @@
             grid-template-columns: 1.15fr .9fr;
             gap: 4rem;
             align-items: center;
-            padding: 1rem 0 5rem
+            padding: 1rem 0 0rem
         }
 
         .hero-tag-row {
@@ -340,10 +340,13 @@
         }
 
         .hero-metrics {
+            width: 100%;
             display: flex;
-            gap: 2.5rem;
+            justify-content: space-between;
+            gap: 2rem;
+            font-size: 30px;
             flex-wrap: wrap;
-            padding-top: 2.5rem;
+            padding: 4rem 5rem;
             border-top: 1px solid var(--bdr)
         }
 
@@ -1266,7 +1269,7 @@
         @media(max-width:768px) {
             .hero-inner {
                 grid-template-columns: 1fr;
-                padding: 6rem 0 4rem
+                padding: 0rem 0 0rem
             }
 
             .hero-visual {
@@ -1334,7 +1337,7 @@
             }
 
             .hero-inner {
-                padding: 5rem 0 3.5rem
+                padding: 1rem 0 3.5rem
             }
 
             .hero h1 {
@@ -1432,7 +1435,9 @@
             }
 
             .hero-metrics {
-                flex-wrap: wrap
+                flex-wrap: wrap;
+                font-size: larger;
+                display: none;
             }
         }
 
@@ -1849,6 +1854,7 @@ html, body {
     }
 }
     </style>
+    
 </head>
 
 <body>
@@ -1961,25 +1967,8 @@ html, body {
                             Growth</button>
                         <button class="btn-g" onclick="alert('📈 Exploring insights...')">📊 Explore Insights</button>
                     </div>
-                    <div class="hero-metrics">
-                        <div>
-                            <div class="hm-val">240%</div>
-                            <div class="hm-lbl">Avg ROAS</div>
-                        </div>
-                        <div>
-                            <div class="hm-val">1.2M+</div>
-                            <div class="hm-lbl">Leads Generated</div>
-                        </div>
-                        <div>
-                            <div class="hm-val">98%</div>
-                            <div class="hm-lbl">Retention Rate</div>
-                        </div>
-                        <div>
-                            <div class="hm-val">50+</div>
-                            <div class="hm-lbl">Awards Won</div>
-                        </div>
-                    </div>
                 </div>
+                
                 <div class="hero-visual fu">
                     <div class="hero-img-card">
                         <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=700&h=500&fit=crop&auto=format"
@@ -1999,6 +1988,25 @@ html, body {
                     </div>
                 </div>
             </div>
+
+             <div class="hero-metrics">
+                        <div>
+                            <div class="hm-val">240%</div>
+                            <div class="hm-lbl">Avg ROAS</div>
+                        </div>
+                        <div>
+                            <div class="hm-val">1.2M+</div>
+                            <div class="hm-lbl">Leads Generated</div>
+                        </div>
+                        <div>
+                            <div class="hm-val">98%</div>
+                            <div class="hm-lbl">Retention Rate</div>
+                        </div>
+                        <div>
+                            <div class="hm-val">50+</div>
+                            <div class="hm-lbl">Awards Won</div>
+                        </div>
+                    </div>
         </div>
     </section>
 
@@ -2519,12 +2527,12 @@ html, body {
                     <!-- SOCIAL ICONS — right side, below contact -->
                     <div class="contact-social-wrap">
                         <div class="footer-social">
-                            <a href="#" class="s-fb"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" class="s-ig"><i class="fab fa-instagram"></i></a>
-                            <a href="#" class="s-tw"><i class="fab fa-x-twitter"></i></a>
-                            <a href="#" class="s-yt"><i class="fab fa-youtube"></i></a>
+                            <a href="#" class="s-fb" style="color: white;"><i style="color: white;" class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="s-ig" style="color: white;"><i style="color: white;" class="fab fa-instagram"></i></a>
+                            <a href="#" class="s-tw" style="color: white;"><i style="color: white;" class="fab fa-x-twitter"></i></a>
+                            <a href="#" class="s-yt" style="color: white;"><i style="color: white;" class="fab fa-youtube"></i></a>
 
-                            <a href="https://wa.me/917860346828" class="s-wa"><i class="fab fa-whatsapp"></i></a>
+                            <a href="https://wa.me/917860346828" class="s-wa"><i style="color: white;" class="fab fa-whatsapp"></i></a>
                         </div>
                     </div>
 

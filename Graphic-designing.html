@@ -596,7 +596,7 @@
             }
 
             .stats-grid {
-                grid-template-columns: 1fr 1fr
+                grid-template-columns: 1fr
             }
 
             .design-hero-left h1 {
@@ -1021,10 +1021,49 @@
             }
         } */
     </style>
+
+<style>
+        *, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.main-div {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.hero-grid-bg {
+    overflow: hidden;
+}
+
+/* Ticker fix */
+.ticker {
+    overflow: hidden;
+    width: 100%;
+}
+
+/* Float cards causing overflow */
+@media (max-width: 768px) {
+    .fc1 {
+        left: 0;
+        bottom: 0;
+    }
+    .fc2 {
+        right: 0;
+        top: 1rem;
+    }
+}
+    </style>
+
 </head>
 
 <body>
-    <header class="site-header">
+    <div></div><header class="site-header">
         <div class="container">
             <div class="header-inner">
 
@@ -1533,11 +1572,11 @@ document.querySelectorAll('.dropdown-toggle').forEach(item => {
         </div>
 
     </footer>
-    
+
     <!-- WhatsApp Float -->
     <a href="https://wa.me/917860346828" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
         <i class="fab fa-whatsapp"></i>
-    </a>
+    </a><div></div>
 
 
     <script>
